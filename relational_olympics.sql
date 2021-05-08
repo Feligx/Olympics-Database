@@ -225,34 +225,6 @@ REFERENCES public.medal (id) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
--- object: public.event_sport | type: TABLE --
--- DROP TABLE IF EXISTS public.event_sport CASCADE;
-CREATE TABLE public.event_sport (
-	id_event integer NOT NULL,
-	id_sport integer NOT NULL,
-	CONSTRAINT event_sport_pk PRIMARY KEY (id_event,id_sport)
-
-);
--- ddl-end --
--- ALTER TABLE public.event_sport OWNER TO postgres;
--- ddl-end --
-
--- object: event_fk | type: CONSTRAINT --
--- ALTER TABLE public.event_sport DROP CONSTRAINT IF EXISTS event_fk CASCADE;
-ALTER TABLE public.event_sport ADD CONSTRAINT event_fk FOREIGN KEY (id_event)
-REFERENCES public.event (id) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE;
--- ddl-end --
-
--- object: sport_fk | type: CONSTRAINT --
--- ALTER TABLE public.event_sport DROP CONSTRAINT IF EXISTS sport_fk CASCADE;
-ALTER TABLE public.event_sport ADD CONSTRAINT sport_fk FOREIGN KEY (id_sport)
-REFERENCES public.sport (id) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE;
--- ddl-end --
-
-
-
 INSERT INTO medal VALUES (1,'Gold'),(2,'Silver'),(3,'Bronze'),(4,'NA');
 
 INSERT INTO city VALUES (1,'Barcelona'),(2,'London'),(3,'Antwerpen'),(4,'Paris'),(5,'Calgary'),(6,'Albertville'),(7,'Lillehammer'),(8,'Los Angeles'),(9,'Salt Lake City'),(10,'Helsinki'),(11,'Lake Placid'),(12,'Sydney'),(13,'Atlanta'),(14,'Stockholm'),(15,'Sochi'),(16,'Nagano'),(17,'Torino'),(18,'Beijing'),(19,'Rio de Janeiro'),(20,'Athina'),(21,'Squaw Valley'),(22,'Innsbruck'),(23,'Sarajevo'),(24,'Mexico City'),(25,'Munich'),(26,'Seoul'),(27,'Berlin'),(28,'Oslo'),(29,'Cortina d''Ampezzo'),(30,'Melbourne'),(31,'Roma'),(32,'Amsterdam'),(33,'Montreal'),(34,'Moskva'),(35,'Tokyo'),(36,'Vancouver'),(37,'Grenoble'),(38,'Sapporo'),(39,'Chamonix'),(40,'St. Louis'),(41,'Sankt Moritz'),(42,'Garmisch-Partenkirchen');
