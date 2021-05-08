@@ -1,7 +1,7 @@
 # Olympics Database
 This is a database with olympic games data from 1896 to 2016, structured for postgresql with all the archives related to building and management the database.
 
-**Note:** Despite this description and some info on the database is in english, the commentaries on the code are on spanish, and also if you want to see the proyect description (this file) on spanish go [here]().
+**Note:** Despite this description and some info on the database is in english, the commentaries on the code are on spanish, and also if you want to see the proyect description (this file) on spanish go [here](https://github.com/Feligx/Olympics-Database/blob/main/README_%5BES%5D.md).
 
 ### | Building the DDL of the database
 
