@@ -10,7 +10,7 @@ First, we made the E-R diagram in order to get a first sketch on how to make the
 ![E-R Diagram](https://github.com/Feligx/Olympics-Database/blob/main/Diagrams/Modelo_Base_de_Datos_Olimpicos_3.png)
 > Entity-Relationship diagram of the database
  
- Then, with that, it was possible to start thinking on how the tables of tha database will work, with all the constraints around it and searching the Third-Normal Form (3NF) to get a good database structure, preventing issues with it in future. So, we made the Relational diagram in [pgModeler](https://pgmodeler.io), and this is what we got:
+ Then, with that, it was possible to start thinking on how the tables of the database will work, with all the constraints around it and searching the Third-Normal Form (3NF) to get a good database structure, preventing issues with it in future. So, we made the Relational diagram in [pgModeler](https://pgmodeler.io), and this is what we got:
  
  ![Relational Diagram](https://github.com/Feligx/Olympics-Database/blob/main/Diagrams/OlympicsR.png)
  >Relational diagram of the database in 3NF
