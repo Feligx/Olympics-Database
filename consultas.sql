@@ -41,6 +41,16 @@ WHERE medal_name IN ('Gold') and sport_name = 'Athletics'
 GROUP BY a.height, s.sport_name
 ORDER BY COUNT(*) DESC;
 
+--Mayores medallistas de USA 
+SELECT a.full_name, COUNT(*)
+FROM region noc INNER JOIN represents r ON noc.id = r.id_region
+INNER JOIN athlete a ON r.id_athlete = a.id 
+INNER JOIN participates p ON a.id = p.id_athlete
+INNER JOIN competes c ON p.id = c.id_participates
+INNER JOIN medal m ON c.id_medal = m.id
+WHERE medal_name IN ('Gold','Silver', 'Bronze') AND noc.region_name = 'USA'
+GROUP BY a.full_name
+ORDER BY COUNT(*) DESC;
 
 -- Participacion de mujeres por año de mayor a menor 
 SELECT e.year, COUNT(a.id)
@@ -52,14 +62,4 @@ WHERE a.gender = 'F'
 GROUP BY e.year
 ORDER BY COUNT(a.id) DESC;
 
---Mayores medallistas de USA 
-SELECT a.full_name, COUNT(*)
-FROM region noc INNER JOIN represents r ON noc.id = r.id_region
-INNER JOIN athlete a ON r.id_athlete = a.id 
-INNER JOIN participates p ON a.id = p.id_athlete
-INNER JOIN competes c ON p.id = c.id_participates
-INNER JOIN medal m ON c.id_medal = m.id
-WHERE medal_name IN ('Gold','Silver', 'Bronze') AND noc.region_name = 'USA'
-GROUP BY a.full_name
-ORDER BY COUNT(*) DESC;
 
