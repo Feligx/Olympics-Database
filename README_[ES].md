@@ -32,7 +32,7 @@ Y también hay otras tablas secundarias y relacionales.
 
 ### | Cargando todos los datos y construyendo módulos de Python para consultarlos
 
-Ahora, con todo el DDL hecho, comenzamos a cargar todos los [datos](https://github.com/Feligx/Olympics-Database/tree/main/Data) en la base de datos y a hacer el [código SQL](https://github.com/Feligx/Olympics-Database/blob/main/remaining_inserts.sql) para hacerlo usando COPY para todos los datos en los archivos csv.
+Ahora, con todo el DDL hecho, comenzamos a cargar todos los [datos](https://github.com/Feligx/Olympics-Database/tree/main/Data) en la base de datos y a hacer el [código SQL](https://github.com/Feligx/Olympics-Database/blob/main/remaining_inserts.sql) para hacerlo usando COPY para todos los datos en los archivos csv. La carga de información a la base de datos fue completamente transparente, no se realizaron cambios sobre los archivos originales y no se presentaron problemas durante ninguna de las fases. 
 
 Y luego, teniendo la base de datos con los datos resectivos, hicimos el módulo de Python para hacer la conexión a la base de datos y obtener los datos de ella para analizarla, puedes ver el módulo [aquí](https://github.com/Feligx/Olympics-Database/blob/main/conexion_olympics.py).
 
