@@ -50,7 +50,7 @@ def sql4():
         INNER JOIN event e on e.id = p.id_event
         WHERE a.gender = 'F' and e.season = 'Summer'
         GROUP BY e.year
-        ORDER BY COUNT(a.id) DESC;"""
+        ORDER BY year ASC;"""
     return q4
 
 
