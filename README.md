@@ -32,7 +32,9 @@ And there are also another secondary and relational tables.
 
 ### | Loading all the data and building python modules to query them
 
-Now with all the DDL done, we started to load all [data](https://github.com/Feligx/Olympics-Database/tree/main/Data) on the database, and making the [SQL code](https://github.com/Feligx/Olympics-Database/blob/main/remaining_inserts.sql) to do it using COPY for all the data in the csv archives.
+Now with all the DDL done, we started to load all [data](https://github.com/Feligx/Olympics-Database/tree/main/Data) on the database, and making the [SQL code](https://github.com/Feligx/Olympics-Database/blob/main/remaining_inserts.sql) to do it using COPY for all the data in the csv archives. 
+The information load to the database was a transparent process. No changes were made to the original files and no problems occurred during any of the phases.
+
 
 And then, having the database with the resective data on it, we made the python module to make the connection to the database and get the data from it to analyse it, you can se the module [here](https://github.com/Feligx/Olympics-Database/blob/main/conexion_olympics.py).
 
