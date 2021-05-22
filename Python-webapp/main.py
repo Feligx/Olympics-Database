@@ -190,8 +190,8 @@ def tab_content(active_tab):
         return render
     elif active_tab == "tab-2":
         render=dcc.Graph(
-            id='Graph 1',
-            figure=gr.figBar
+            id='Graph 2',
+            figure=gr.figMap
             )
         return render
     elif active_tab == "tab-3":
@@ -202,8 +202,8 @@ def tab_content(active_tab):
         return render
     elif active_tab == "tab-4":
         render=dcc.Graph(
-            id='Graph 1',
-            figure=gr.figBar
+            id='Graph 4',
+            figure=gr.figTime
             )
         return render
 
