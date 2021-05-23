@@ -62,7 +62,7 @@ con.openConnection()
 q5 = pd.read_sql_query(sql.sql5(), con.connection)
 con.closeConnection()
 estatura = pd.DataFrame(q5)
-figHeight = px.bar(estatura.head(25), x="medallas_oro", y="altura", orientation = 'h', title = "Medallas de oro por estatura del atleta de mayor a menor Atletismo", color="altura")
+figHeight = px.bar(estatura.head(25), x="medallas_oro", y="altura", orientation = 'h', title = "Medallas de oro por estatura del atleta de mayor a menor Atletismo", color="medallas_oro", color_continuous_scale = "Bluyl")
 
 # Consulta 6
 # Medallas de oro por atleta de mayor a menor
