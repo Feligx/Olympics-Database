@@ -53,6 +53,8 @@ pip install dash-bootstrap-components
 
 Finally, we made the "[main](https://github.com/Feligx/Olympics-Database/blob/main/Python-webapp/main.py)" file where all the structure of the web app rest, here we used the `Dash` components like `dash-core-components`, `dash-html-components`, `dash-bootstrap-components` and also `Plotly` and `Pandas` for making it possible. Here we imported the graphs created by the previous mentioned file to put them into cards with tabs to analyse them. The file has a little description for some things that need explanation.
 
+Maybe you are wondering, what is the `style.css` file that is on the [assets]() folder? Well, it is the file that contains the classes and styles for the appearence of the web app... What? Why it is not imported on the main file? could you ask. That is because, it is a Dash property, it loads all the css and js files in the assets folder (if exists) of the web app, so we don't need to import the file in our `main.py`.
+
 On the web app there is a summarized version of this file describing the project, and other thing to take into account, is that we use `base64` library to encode local images and using them into the web app because `Dash` don't allow this, but we still let that part up to the user, is possible also to use them leaving in the "src" attribute of the `<img>` tag as a url to the images on this repo (as we did! leaving the other part hidden as comments).
 
 
