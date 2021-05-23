@@ -149,7 +149,7 @@ tab6_content = dbc.Card(
                 id='Graph 6',
                 figure=gr.figBarUSA
                 ),
-            html.P("Mediante el gráfico de barras verticales es posible visualizar la cantidad de medallas ganadas por los 20 mayores medallistas de la congregación de Estados Unidos, en donde es más que evidente que Michael Phelps es el mayor medallista de Estados Unidos ya que cuenta con 23 medallas en total, lo cual es más del doble de los atletas que le siguen son 12 medallas. El gráfico también cuenta con una clave de colores que permite una mayor distinción entre las diferentes cantidades. Mediante este diagrama se hace una clasificación de mayores a menores medallistas estadounidenses y es posible realizar una comparación entre estos. A partir de este diagrama, la congregación del país puede saber cuáles de sus atletas han ganado más en los distintos eventos olímpicos para darles más patrocinio. No obstante, a pesar de que el gráfico es bastante ilustrativo para el análisis propuesto, solo se realiza una relación entre el atleta y la cantidad de medallas que ha ganado sin hacer ninguna especie de distinción entre medallas de bronce, plata y oro, tampoco es posible visualizar otras características del atleta como lo es la estatura, peso o la cantidad de eventos olímpicos en los que ha participado, que podrían resultar ser factores que influencien la cantidad de medallas ganadas por un atleta. "),
+            html.P("Mediante el gráfico de barras verticales es posible visualizar la cantidad de medallas ganadas por los 20 mayores medallistas de la congregación de Estados Unidos, en donde es más que evidente que Michael Phelps es el mayor medallista de Estados Unidos ya que cuenta con 23 medallas en total, lo cual es más del doble de los atletas que le siguen son 12 medallas. El gráfico también cuenta con una clave de colores que permite una mayor distinción entre las diferentes cantidades. Mediante este diagrama se hace una clasificación de mayores a menores medallistas estadounidenses y es posible realizar una comparación entre estos. A partir de este diagrama, la congregación del país puede saber cuáles de sus atletas han ganado más en los distintos eventos olímpicos para darles más patrocinio. No obstante, a pesar de que el gráfico es bastante ilustrativo para el análisis propuesto, solo se realiza una relación entre el atleta y la cantidad de medallas que ha ganado sin hacer ninguna especie de distinción entre medallas de bronce, plata y oro, tampoco es posible visualizar otras características del atleta como lo es la estatura, peso o la cantidad de eventos olímpicos en los que ha participado, que podrían resultar ser factores que influencien la cantidad de medallas ganadas por un atleta."),
             #dbc.Button("Ver consulta", color="success"),
         ]
     ),
@@ -159,12 +159,12 @@ tab6_content = dbc.Card(
 tabs = dbc.Tabs(
     [
         #se crea cada uno de los tabs con el contenido correspondiente
-        dbc.Tab(tab1_content, label="Análisis 1"),
-        dbc.Tab(tab2_content, label="Análisis 2"),
-        dbc.Tab(tab3_content, label="Análisis 3"),
-        dbc.Tab(tab4_content, label="Análisis 4"),
-        dbc.Tab(tab5_content, label="Análisis 5"),
-        dbc.Tab(tab6_content, label="Análisis 6"),
+        dbc.Tab(tab1_content, label="Análisis 1",style={'text-align':'justify'}),
+        dbc.Tab(tab2_content, label="Análisis 2",style={'text-align':'justify'}),
+        dbc.Tab(tab3_content, label="Análisis 3",style={'text-align':'justify'}),
+        dbc.Tab(tab4_content, label="Análisis 4",style={'text-align':'justify'}),
+        dbc.Tab(tab5_content, label="Análisis 5",style={'text-align':'justify'}),
+        dbc.Tab(tab6_content, label="Análisis 6",style={'text-align':'justify'}),
     ],style={'backgroundColor':'lightgray','borderRadius':5}
 )
 
@@ -205,7 +205,7 @@ app.layout = html.Div(children=[
             html.P("Los Juegos Olímpicos constituyen un evento cultural e internacional, en el que participan atletas de diferentes disciplinas deportivas representando a sus respectivas delegaciones nacionales, constituyendo el festival mundial del deporte. “Sus objetivos, en última instancia, son el desarrollo personal y la paz mundial a través del deporte” (Acerca de los juegos olímpicos, 2019). "),
             html.P("Para el proyecto final de Manejo de Bases de Datos 2021-1, de la carrera de  Matemáticas Aplicadas y Ciencias de la Computación, de la Facultad de Ingeniería Ciencia y Tecnología de la Universidad del Rosario, hemos implementado una base de datos para postgreSQL con información sobre los Juegos Olímpicos desde 1896 a 2016. A partir de ella, con la librería Dash de Python hemos generado las gráficas de análisis que se presentan a continuación, de las que podemos obtener conclusiones sobre la historia de los juegos, los atletas, las delegaciones, los eventos y los deportes",style={'text-align':'justify'})
             ],
-            className="col-md-6"),
+            className="col-md-6",style={'text-align':'justify'}),
         html.Div(children=[
             #html.Img(src='data:image/png;base64,{}'.format(encoded_image4.decode()), alt='main_img',style={'width':400,'margin-left':'auto','margin-right':'auto'}), #si se quiere usar las img de forma local
             html.Img(src='https://raw.githubusercontent.com/Feligx/Olympics-Database/main/Python-webapp/img/main_img.png', alt='main_img',style={'width':400,'margin-left':'auto','margin-right':'auto'}), #si se quiere usar las img desde el repo de forma remota
@@ -228,7 +228,7 @@ app.layout = html.Div(children=[
                     html.P("Finalmente, se muestra un gráfico sobre los mayores medallistas en la historia de Estados Unidos."),
                     html.P(children=["Puedes ver los análisis de forma más detallada",html.A(" Aquí",href="#DashBoard",style={'text-decoration':'none'})])
                     ],
-                    className="col-md-5",style={'margin-top':25}),
+                    className="col-md-5",style={'margin-top':25,'text-align':'justify'}),
     ],className="row",style={'padding':25}),
 
     #---------- Sección Funcionamiento
@@ -237,17 +237,17 @@ app.layout = html.Div(children=[
                 html.A(id="Funcionamiento"), #anclaje para ser llamado desde el nav hacia esta seccion
                 html.Div(children=[
                     html.H3("¿Cómo es la base de datos?",style={'marginTop':25}),
-                    html.P(children=["La base de datos de los Juegos Olímpicos, consta de 7 tablas principales"]),
+                    html.P(children=["La base de datos de los Juegos Olímpicos, consta de 7 tablas principales"],className='list'),
                     html.Li("1.  Evento: Tiene toda la información sobre los eventos olímpicos entre 1986 y 2016.",className='list'),
-                    html.P("2.  Ciudad: Las ciudades donde se han celebrado los eventos olímpicos."),
-                    html.P("3.  Deporte: Tiene todo sobre los deportes que se juegan en un evento."),
-                    html.P("4.  Categoría: Todas las categorías de un deporte."),
-                    html.P("5.  Atleta: La información sobre todos los atletas que han participado en un Evento Olímpico."),
-                    html.P("6.  Región: Las regiones que participan en eventos Olímpicos."),
-                    html.P("7.  Medalla: Los 3 tipos básicos de medallas que se pueden ganar."),
-                    html.P("Y también hay otras tablas secundarias y relacionales."),
+                    html.Li("2.  Ciudad: Las ciudades donde se han celebrado los eventos olímpicos.",className='list'),
+                    html.Li("3.  Deporte: Tiene todo sobre los deportes que se juegan en un evento.",className='list'),
+                    html.Li("4.  Categoría: Todas las categorías de un deporte.",className='list'),
+                    html.Li("5.  Atleta: La información sobre todos los atletas que han participado en un Evento Olímpico.",className='list'),
+                    html.Li("6.  Región: Las regiones que participan en eventos Olímpicos.",className='list'),
+                    html.Li("7.  Medalla: Los 3 tipos básicos de medallas que se pueden ganar.",className='list'),
+                    html.P("Y también hay otras tablas secundarias y relacionales.",className='list'),
                     ],
-                    className="col-md-5"),
+                    className="col-md-5",style={'text-align':'justify'}),
                 html.Div(children=[
                     #html.Img(src='data:image/png;base64,{}'.format(encoded_image6.decode()), alt='main_img',style={'width':700,'margin-left':'auto','margin-right':10}),
                     html.Img(src='https://raw.githubusercontent.com/Feligx/Olympics-Database/main/Python-webapp/img/OlympicsR.png', alt='main_img',style={'width':600,'margin-left':10,'margin-right':10}),
