@@ -29,8 +29,8 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 #image_filename4 = 'img\main_img.png'
 #encoded_image4 = base64.b64encode(open(image_filename4, 'rb').read())
 
-image_filename5 = 'img\macc_ur_logo.png'
-encoded_image5 = base64.b64encode(open(image_filename5, 'rb').read())
+#image_filename5 = 'img\macc_ur_logo.png'
+#encoded_image5 = base64.b64encode(open(image_filename5, 'rb').read())
 
 #image_filename6 = 'img\OlympicsR.png'
 #encoded_image6 = base64.b64encode(open(image_filename6, 'rb').read())
