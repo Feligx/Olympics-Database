@@ -219,13 +219,13 @@ app.layout = html.Div(children=[
                 html.Div(children=[card],className="col-md-7",style={'margin-top':28}), #se usa el card generado anteriormente con el contenido puesto mediante el callback de más abajo
                 html.Div(children=[ #analisis leve de los gráficos obtenidos a partir de los datos de la BDD
                     html.H3("Gráficas de Análisis",style={'marginTop':25}),
-                    html.P("A partir de la información de la Base de Datos sobre los Juegos Olímpicos, generamos las siguientes gráficas con contenido histórico relevante"),
-                    html.P("La primera gráfica, es un gráfico de barras que muestra en orden descendente, los mayores medallistas de oro en la historia de los juegos con su respectivo número de medallas de oro, a nivel mundial"),
-                    html.P("la segunda gráfica, es un mapa de calor que muestra las medallas de oro por pais en la historia de los juegos."),
-                    html.P("La tercera es un gráfico de torta que ofrece información sobre el número de medallas obtenidas por Colombianos, agrupadas por género del atleta"),
-                    html.P("la gráfica en la cuarta posición, es un gráfico de líneas que muestra como ha sido la participación de las mujeres en las competencias con respecto al tiempo"),
-                    html.P("El gráfico 5, corresponde a las medallas de oro por estatura del atleta de mayor a menor Atletismo"),
-                    html.P("Finalmente, se muestra un gráfico sobre los mayores medallistas en la historia de Estados Unidos"),
+                    html.P("A partir de la información de la Base de Datos sobre los Juegos Olímpicos, generamos las siguientes gráficas con contenido histórico relevante."),
+                    html.P("La primera gráfica, es un gráfico de barras que muestra en orden descendente, los mayores medallistas de oro en la historia de los juegos con su respectivo número de medallas de oro, a nivel mundial."),
+                    html.P("La segunda gráfica, es un mapa de calor que muestra las medallas de oro por pais en la historia de los juegos."),
+                    html.P("La tercera pestaña contiene un gráfico de torta que ofrece información sobre el número de medallas obtenidas por Colombianos, agrupadas por género del atleta."),
+                    html.P("La gráfica en la cuarta posición, es un gráfico de líneas que muestra como ha sido la participación de las mujeres en las competencias con respecto al tiempo."),
+                    html.P("El gráfico 5, corresponde a las medallas de oro por estatura del atleta de mayor a menor Atletismo."),
+                    html.P("Finalmente, se muestra un gráfico sobre los mayores medallistas en la historia de Estados Unidos."),
                     html.P(children=["Puedes ver los análisis de forma más detallada",html.A(" Aquí",href="#DashBoard",style={'text-decoration':'none'})])
                     ],
                     className="col-md-5",style={'margin-top':25}),
