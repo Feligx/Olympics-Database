@@ -40,4 +40,23 @@ And then, having the database with the resective data on it, we made the python 
 
 Finally, we need to do some analysis using the data on tha database, using the python packages `Pandas` and `Dash`.
 
+### | Building the Web App on python
+
+With the DataBase-Python connection ready to work, we can start building the web app where we are going to include the graphs and their respective analysis.
+
+In this way, we created the [Python-webapp](https://github.com/Feligx/Olympics-Database/tree/main/Python-webapp) folder that'll contain all the files about the app, and started by creating the [Connection](https://github.com/Feligx/Olympics-Database/blob/main/Python-webapp/Connection.py) an [SQLquerys](https://github.com/Feligx/Olympics-Database/blob/main/Python-webapp/SQLquerys.py) files where we'll setup the connection to the database and create the querys we want to call them later, respectively. Using that, we created the [Graphs](https://github.com/Feligx/Olympics-Database/blob/main/Python-webapp/graphs.py) file where we make all the graphs using dash around the data obtained from the querys in order to import them later on the web app.
+
+> **Note:** here you have to install the dash-bootstrap-components additional to the `Dash` main components, use:
+```
+pip install dash-bootstrap-components
+```
+
+Finally, we made the "[main](https://github.com/Feligx/Olympics-Database/blob/main/Python-webapp/main.py)" file where all the structure of the web app rest, here we used the `Dash` components like `dash-core-components`, `dash-html-components`, `dash-bootstrap-components` and also `Plotly` and `Pandas` for making it possible. Here we imported the graphs created by the previous mentioned file to put them into cards with tabs to analyse them. The file has a little description for some things that need explanation.
+
+On the web app there is a summarized version of this file describing the project, and other thing to take into account, is that we use `base64` library to encode local images and using them into the web app because `Dash` don't allow this, but we still let that part up to the user, is possible also to use them leaving in the "src" attribute of the `<img>` tag as a url to the images on this repo (as we did! leaving the other part hidden as comments).
+
+
 Hope you find usefull this "little" description of our database proyect and how it works!
+
+### | **List of errors and bugs we found during the process and still exist on the files:** 
+* None :)
