@@ -38,4 +38,24 @@ Y luego, teniendo la base de datos con los datos resectivos, hicimos el módulo 
 
 Finalmente, necesitamos hacer un análisis usando los datos en la base de datos, usando los paquetes de Python `Pandas` y` Dash`.
 
-¡Espero que encuentre útil esta "pequeña" descripción de nuestro proyecto de base de datos y cómo funciona!
+### | Construyendo la aplicación web en Python
+
+Con la conexión DataBase-Python lista para funcionar, podemos comenzar a construir la aplicación web donde vamos a incluir los gráficos y su respectivo análisis.
+
+De esta manera, creamos la carpeta [Python-webapp] (https://github.com/Feligx/Olympics-Database/tree/main/Python-webapp) que contendrá todos los archivos sobre la aplicación, y comenzamos por creando la [Connection] (https://github.com/Feligx/Olympics-Database/blob/main/Python-webapp/Connection.py) un [SQLquerys] (https://github.com/Feligx/Olympics-Database /blob/main/Python-webapp/SQLquerys.py) donde configuraremos la conexión a la base de datos y crearemos las consultas que queremos llamarlas más adelante, respectivamente. Usando eso, creamos el archivo [Graphs] (https://github.com/Feligx/Olympics-Database/blob/main/Python-webapp/graphs.py) donde hacemos todos los gráficos usando guiones alrededor de los datos obtenidos de las consultas para importarlas más tarde en la aplicación web.
+
+> ** Nota: ** aquí tienes que instalar dash-bootstrap-components adicionales a los componentes principales de `Dash`, usa:
+''
+pip instalar dash-bootstrap-components
+''
+Finalmente, hicimos el archivo "[main] (https://github.com/Feligx/Olympics-Database/blob/main/Python-webapp/main.py)" donde descansa toda la estructura de la aplicación web, aquí usó los componentes `Dash` como` dash-core-components`, `dash-html-components`,` dash-bootstrap-components` y también `Plotly` y` Pandas` para hacerlo posible. Aquí importamos los gráficos creados por el archivo mencionado anteriormente para ponerlos en tarjetas con pestañas para analizarlos. El archivo tiene una pequeña descripción de algunas cosas que necesitan explicación.
+
+Quizás preguntes, ¿qué es el archivo `style.css` que está en la carpeta [assets] ()? Bueno, es el archivo que contiene las clases y estilos para la aparición de la aplicación web ... ¿Qué? ¿Por qué no se importa en el archivo principal? podrías preguntar. Esto se debe a que es una propiedad de Dash, carga todos los archivos css y js en la carpeta de activos (si existe) de la aplicación web, por lo que no necesitamos importar el archivo en nuestro `main.py`.
+
+En la aplicación web hay una versión resumida de este archivo que describe el proyecto, y otra cosa a tener en cuenta es que usamos la biblioteca `base64` para codificar imágenes locales y usarlas en la aplicación web porque` Dash` no lo hace. permitir esto, pero aún dejamos esa parte en manos del usuario, también es posible usarlos dejando en el atributo "src" de la etiqueta `<img>` como una URL a las imágenes en este repositorio (¡como hicimos! dejando la otra parte oculta como comentarios).
+
+
+¡Espero que encuentren útil esta "pequeña" descripción de nuestro proyecto de base de datos y cómo funciona!
+
+### | ** Lista de errores y bugs que encontramos durante el proceso y aún existen en los archivos: **
+* Ninguno :)
