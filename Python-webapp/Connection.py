@@ -1,5 +1,6 @@
 import psycopg2
 
+#Se define la conexion con la base de datos, para luego ser llamada en el archivo graphs.py
 class Connection:
 
     def __init__(self):

@@ -1,6 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+/*
+
+Hoja de estilos personalizada de la webapp, y se usa en conjunto con la de bootstrap
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap'); /* font que se importa desde googlefonts para colocarla en el sitio*/
 
 *{
+  /* clases generales para todos los componentes del sitio, sujeta a las posibles clases extra de un tag particular */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -8,14 +15,21 @@
 }
 
 li, button{
+  /*clases generales para todos los tags de tipo li (list item) o button */
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #edf0f1;
-  text-decoration:none;
+  text-decoration:none; /* para que el link no se subraye ni tenga otras decoraciones por default*/
+}
+
+.list{
+  /* clase personalizada para la los li de la seccion de Funcionamiento */
+  color: currentColor;
 }
 
 .header_a{
+  /* clase personalizada para los tags de tipo a(anchor/ancla) en el nav */
   color: #edf0f1;
   text-decoration:none;
   font-family: 'Roboto', sans-serif;
@@ -24,10 +38,11 @@ li, button{
 }
 
 a{
-  background-color: none;
+  /*clase general para todos los tags de tipo a en el sitio*/
+  background-color: none; /*style para que los a no tengan color de fondo*/
 }
 
-header{
+header{ /*clase general para el header*/
   display:flex;
   justify-content: space-between;
   align-items:center;
@@ -35,22 +50,23 @@ header{
   background-color: #24252A;
 }
 
-footer{
+footer{ /*clase general para el footer*/
   background-color: #24252A;
 }
 
-.logo{
+.logo{ /*clase personalizada para el logo del sitio*/
     width:100px;
     cursor:pointer;
     margin-right:auto;
     margin-left: 25px;
 }
 
-.git{
+.git{ /*clase personalizada para el logo de git en el nav*/
   width: 30px;
   margin-bottom: 15px;
 }
 
+/*Clases para los links del nav*/
 .nav__links{
   list-style: none;
 }
@@ -68,7 +84,7 @@ footer{
   color: #0088a9;
 }
 
-button{
+button{  /*clase general para los button */
   padding:9px 25px;
   background-color: rgba(0,0,0,0);
   border:none;
@@ -78,6 +94,7 @@ button{
   vertical-align: -.125em;
 }
 
+/*Clases para los tabs del card en la seccion de Analisis*/
 .ctest{
   color:black;
 }

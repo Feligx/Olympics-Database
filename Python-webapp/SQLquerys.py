@@ -1,3 +1,5 @@
+#Querys que se realizarán a la base de datos construida para realizar analisis a partir de los datos resultantes de la consulta
+
 #----------Medallas de oro por atleta de mayor a menor
 
 # Medallas de oro por atleta de mayor a menor

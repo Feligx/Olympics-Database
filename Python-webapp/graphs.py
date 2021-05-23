@@ -8,6 +8,10 @@ import pandas as pd
 from Connection import Connection
 import SQLquerys as sql
 import base64
+#ver las notas del main.py bajo los imports para entender estos tambien
+
+
+#------- Construccion de las gráficas segun las consultas que se encuentran en el SQLquerys.py
 
 # Consulta 1
 # Medallas de oro por atleta de mayor a menor
